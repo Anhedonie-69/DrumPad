@@ -54,24 +54,6 @@ allPads.forEach(e => {
     });
 });
 
-document.addEventListener("keydown", (e) => {   
-    allPads.forEach(element => {
-        if (e.keyCode == element.getAttribute("data-key")){
-            element.classList.add("sound", "playing");
-            playSound(e.keyCode);
-        };
-    });
-});
-
-function playSound(keyCode){
-    let audios = document.querySelectorAll("audio");
-    audios.forEach(e => {
-        if (keyCode == e.getAttribute("data-key")){
-            e.play();
-        };
-    });
-};
-
 function removeTransition(element){
     element.classList.remove("sound", "playing");
 };
